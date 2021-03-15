@@ -2,9 +2,12 @@ language: node_js
 node_js: "12"
 cache: npm
 script: 
-  - "npm run lint"
-  - "npm test"
-  - "npm run build"
+  {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
 deploy:
   provider: releases
   api_key: "GITHUB OAUTH TOKEN"
